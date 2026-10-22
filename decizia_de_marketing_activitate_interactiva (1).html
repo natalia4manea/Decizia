@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decizia de marketing — Activitate interactivă</title>
+<style>
+:root{--ink:#1d2939;--muted:#667085;--blue:#2457a7;--pale:#eef4ff;--green:#16794b;--line:#d9e1ec;--bg:#f5f7fb;--orange:#9a4d00}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:linear-gradient(135deg,#173b70,#2d68b2);color:#fff;padding:30px 18px}
+.hero,.wrap{max-width:980px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:700;opacity:.85}
+h1{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.12;margin:.45rem 0}.sub{max-width:720px;color:#e8efff}
+main{max-width:980px;margin:22px auto;padding:0 14px 44px}.toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:18px;position:sticky;top:8px;z-index:2;box-shadow:0 3px 12px #1d29390a}
+.timer{font-size:1.25rem;font-weight:800;font-variant-numeric:tabular-nums}.timer.warning{color:#b42318}.progress{color:var(--muted);font-size:.9rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;margin:16px 0;box-shadow:0 3px 12px #1d293906}.card h2{margin:0 0 8px;font-size:1.35rem}.lead{color:var(--muted);margin-top:0}
+.pill{display:inline-block;background:var(--pale);color:var(--blue);font-size:.82rem;font-weight:750;border-radius:999px;padding:4px 10px;margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.option{border:1px solid var(--line);border-radius:12px;padding:13px;background:#fff}.option strong{display:block}.cost{font-size:1.2rem;font-weight:800;color:var(--green)}.small{font-size:.9rem;color:var(--muted)}
+label{display:block;font-weight:650;margin:12px 0 5px}input[type=text],textarea,select{width:100%;padding:10px 11px;border:1px solid #bcc8d8;border-radius:9px;font:inherit;color:var(--ink);background:#fff}textarea{min-height:78px;resize:vertical}.quizitem{padding:13px 0;border-top:1px solid var(--line)}.quizitem:first-of-type{border-top:0}.choices{display:flex;gap:8px 16px;flex-wrap:wrap;margin-top:8px}.choices label{font-weight:450;margin:0;display:flex;gap:7px;align-items:flex-start}.choices input{margin-top:5px}
+button{border:0;border-radius:10px;padding:11px 15px;font:inherit;font-weight:750;cursor:pointer;background:var(--blue);color:white}button.secondary{background:#e9eef6;color:#24364d}button.green{background:var(--green)}button:focus,input:focus,textarea:focus,select:focus{outline:3px solid #b9d0ff;outline-offset:1px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.feedback{border-radius:12px;padding:14px;margin-top:14px;background:#f0f7f2;border:1px solid #c8e5d1}.feedback h3{margin:0 0 7px}.error{background:#fff3f0;border-color:#ffd2c9}.hidden{display:none}.score{font-size:1.5rem;font-weight:850}.step-list{padding-left:22px}.note{border-left:4px solid #e4a23a;background:#fff8e8;padding:12px 14px;border-radius:6px}.footer{font-size:.85rem;color:var(--muted);text-align:center;padding:16px}
+@media(max-width:600px){.card{padding:16px}.toolbar{position:static}.actions button{width:100%}}
+</style>
+</head>
+<body>
+<header><div class="hero">
+<div class="eyebrow">Marketing • Anul IV • 30 de minute</div>
+<h1>Decizia de marketing</h1>
+<p class="sub">Misiune individuală: identifică tipurile de decizii, reconstituie procesul decizional și recomandă o strategie pentru compania fictivă Urban Style.</p>
+</div></header>
+<main>
+<div class="toolbar">
+<div><div class="timer" id="timer" aria-live="polite">30:00</div><div class="small">Cronometru pentru activitate</div></div>
+<div class="progress" id="progress">Progres: 0 din 3 secțiuni completate</div>
+<div class="actions" style="margin:0"><button class="secondary" id="startBtn" type="button">Pornește cronometrul</button><button class="secondary" id="resetBtn" type="button">Resetează</button></div>
+</div>
+
+<section class="card" id="part1">
+<span class="pill">Provocarea 1 · 5 minute</span><h2>Detectivul deciziilor</h2>
+<p class="lead">Selectează răspunsul potrivit pentru fiecare situație.</p>
+<div class="quizitem"><strong>1. Directorul aprobă poziționarea brandului pentru următorii trei ani.</strong><div class="choices">
+<label><input type="radio" name="q1" value="Strategică">Strategică</label><label><input type="radio" name="q1" value="Tactică">Tactică</label><label><input type="radio" name="q1" value="Operațională">Operațională</label></div></div>
+<div class="quizitem"><strong>2. Managerul stabilește bugetul lunar al unei campanii.</strong><div class="choices">
+<label><input type="radio" name="q2" value="Strategică">Strategică</label><label><input type="radio" name="q2" value="Tactică">Tactică</label><label><input type="radio" name="q2" value="Operațională">Operațională</label></div></div>
+<div class="quizitem"><strong>3. Specialistul decide ora publicării unei postări de astăzi.</strong><div class="choices">
+<label><input type="radio" name="q3" value="Strategică">Strategică</label><label><input type="radio" name="q3" value="Tactică">Tactică</label><label><input type="radio" name="q3" value="Operațională">Operațională</label></div></div>
+<div class="quizitem"><strong>4. Vânzările au scăzut, iar echipa analizează datele pentru a afla cauza. Ce etapă este reprezentată?</strong><div class="choices">
+<label><input type="radio" name="q4" value="Identificarea problemei">Identificarea și analiza problemei</label><label><input type="radio" name="q4" value="Implementare">Implementarea deciziei</label><label><input type="radio" name="q4" value="Control">Evaluarea rezultatelor</label></div></div>
+<div class="actions"><button type="button" onclick="checkQuiz()">Verifică răspunsurile</button></div>
+<div id="quizFeedback" class="feedback hidden" aria-live="polite"></div>
+</section>
+
+<section class="card" id="part2">
+<span class="pill">Provocarea 2 · 8 minute</span><h2>Escape room decizional</h2>
+<p>Compania fictivă Urban Style constată că vânzările unui produs destinat tinerilor au scăzut cu 15% într-o lună. Ordonează etapele procesului decizional de la prima la ultima.</p>
+<div id="stageFields"></div>
+<label for="decident">Decidentul — cine adoptă decizia?</label><input id="decident" type="text" placeholder="Scrie răspunsul">
+<label for="problema">Problema — ce necesită soluționare?</label><textarea id="problema" placeholder="Formulează problema decizională"></textarea>
+<label for="alternative">Alternative — ce opțiuni sunt disponibile?</label><textarea id="alternative" placeholder="Enumeră variantele posibile"></textarea>
+<label for="criterii">Criterii — cum comparăm alternativele?</label><textarea id="criterii" placeholder="Indică cel puțin două criterii"></textarea>
+<label for="obiectiv">Obiectiv — ce rezultat se urmărește?</label><textarea id="obiectiv" placeholder="Formulează rezultatul urmărit"></textarea>
+<div class="actions"><button type="button" onclick="checkStages()">Verifică etapele</button><button type="button" class="secondary" onclick="showModel()">Vezi răspunsurile-model</button></div>
+<div id="stageFeedback" class="feedback hidden" aria-live="polite"></div>
+</section>
+
+<section class="card" id="part3">
+<span class="pill">Provocarea 3 · 12 minute</span><h2>Consiliul de marketing</h2>
+<p>Bugetul maxim disponibil este de <strong>12 000 lei</strong>. Alege o singură alternativă principală și argumentează decizia. Datele de mai jos sunt fictive și au scop didactic.</p>
+<div class="grid">
+<div class="option"><strong>A. Creatori de conținut</strong><div class="cost">10 000 lei</div><p>Acoperire estimată: 20 000 persoane. Creștere estimată a vânzărilor: 12%.</p></div>
+<div class="option"><strong>B. Reduceri online</strong><div class="cost">12 000 lei</div><p>Acoperire estimată: 15 000 persoane. Creștere estimată: 18%. Marja de profit se poate reduce.</p></div>
+<div class="option"><strong>C. Promovare la punctul de vânzare</strong><div class="cost">8 000 lei</div><p>Acoperire estimată: 8 000 persoane. Creștere estimată: 8%. Rămâne o rezervă de buget.</p></div>
+</div>
+<label for="choice">Alternativa recomandată</label><select id="choice"><option value="">Selectează A, B sau C</option><option value="A">A — Creatori de conținut</option><option value="B">B — Reduceri online</option><option value="C">C — Promovare la punctul de vânzare</option></select>
+<label for="reason">Argumentarea deciziei (3–4 propoziții)</label><textarea id="reason" placeholder="Compară costul, rezultatul estimat și obiectivul companiei."></textarea>
+<label for="risk">Un risc și o măsură de diminuare</label><textarea id="risk" placeholder="Risc: ... Măsură de diminuare: ..."></textarea>
+<label for="info">Ce informații suplimentare ai solicita înainte de implementare?</label><textarea id="info" placeholder="De exemplu: date despre publicul-țintă, conversii, marjă..."></textarea>
+<label for="measure">Cum vei verifica dacă decizia a fost eficientă?</label><textarea id="measure" placeholder="Precizează indicatori și momentul evaluării."></textarea>
+<div class="actions"><button type="button" onclick="checkCase()">Evaluează răspunsurile</button><button type="button" class="secondary" onclick="makeAIPrompt()">Pregătește cererea pentru feedback AI</button></div>
+<div id="caseFeedback" class="feedback hidden" aria-live="polite"></div>
+<div id="aiBox" class="feedback hidden">
+<h3>Cerere pentru feedback individual cu AI</h3>
+<p class="small">Acest fișier HTML nu este conectat direct la un model AI. Copiază textul de mai jos și lipește-l într-o conversație ChatGPT pentru feedback personalizat.</p>
+<textarea id="aiPrompt" rows="9" readonly></textarea>
+<div class="actions"><button type="button" onclick="copyPrompt()">Copiază cererea</button><button type="button" class="secondary" onclick="window.open('https://chatgpt.com/','_blank','noopener')">Deschide ChatGPT</button></div>
+<div id="copyStatus" class="small" aria-live="polite"></div>
+</div>
+</section>
+
+<section class="card">
+<span class="pill">Încheiere · 5 minute</span><h2>Autoverificare</h2>
+<p>Bifează competențele pe care le-ai demonstrat.</p>
+<label><input type="checkbox" class="donecheck"> Am identificat tipuri diferite de decizii.</label>
+<label><input type="checkbox" class="donecheck"> Am ordonat etapele procesului decizional.</label>
+<label><input type="checkbox" class="donecheck"> Am identificat elementele procesului decizional.</label>
+<label><input type="checkbox" class="donecheck"> Am comparat alternative și am argumentat o alegere.</label>
+<label><input type="checkbox" class="donecheck"> Am stabilit cum se măsoară eficiența deciziei.</label>
+<label for="confidence">Cât de sigur ești că poți lua independent o decizie de marketing argumentată?</label>
+<select id="confidence"><option value="">Selectează nivelul</option><option>1 — Am nevoie de mult sprijin.</option><option>2 — Înțeleg parțial procesul.</option><option>3 — Pot aplica etapele în situații obișnuite.</option><option>4 — Pot analiza și justifica decizii independent.</option></select>
+<div class="actions"><button type="button" class="green" onclick="finish()">Finalizează activitatea</button><button type="button" class="secondary" onclick="window.print()">Tipărește / salvează PDF</button></div>
+<div id="finalFeedback" class="feedback hidden" aria-live="polite"></div>
+</section>
+<div class="note"><strong>De reținut:</strong> poate exista mai mult de o decizie justificată. Contează coerența argumentelor, utilizarea datelor, respectarea bugetului și identificarea riscurilor.</div>
+<div class="footer">Resursă didactică pentru exersare. Datele companiei Urban Style sunt fictive.</div>
+</main>
+<script>
+const stages=[
+"Identificarea și definirea problemei",
+"Stabilirea criteriilor de evaluare",
+"Generarea alternativelor decizionale",
+"Evaluarea alternativelor și alegerea variantei optime",
+"Implementarea alternativei alese",
+"Evaluarea rezultatelor și corectarea abaterilor"
+];
+const stageFields=document.getElementById('stageFields');
+stages.forEach((_,i)=>{let l=document.createElement('label');l.textContent='Poziția '+(i+1);let s=document.createElement('select');s.id='stage'+i;s.innerHTML='<option value="">Selectează etapa</option>'+stages.map((t,j)=>`<option value="${j}">${t}</option>`).join('');stageFields.appendChild(l);stageFields.appendChild(s)});
+let seconds=1800,interval=null,started=false;
+function renderTimer(){let m=Math.floor(seconds/60),s=seconds%60;let el=document.getElementById('timer');el.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');el.classList.toggle('warning',seconds<=300)}
+document.getElementById('startBtn').onclick=()=>{if(interval)return;started=true;document.getElementById('startBtn').textContent='Cronometrul rulează';interval=setInterval(()=>{seconds--;renderTimer();if(seconds<=0){clearInterval(interval);interval=null;document.getElementById('timer').textContent='00:00';document.getElementById('startBtn').textContent='Timpul a expirat'}},1000)};
+document.getElementById('resetBtn').onclick=()=>{clearInterval(interval);interval=null;seconds=1800;started=false;renderTimer();document.getElementById('startBtn').textContent='Pornește cronometrul'};
+function show(id,html,err=false){let e=document.getElementById(id);e.innerHTML=html;e.classList.remove('hidden');e.classList.toggle('error',err)}
+function checkQuiz(){const ans={q1:'Strategică',q2:'Tactică',q3:'Operațională',q4:'Identificarea problemei'};let score=0,lines=[];Object.keys(ans).forEach((q,i)=>{let v=document.querySelector(`input[name="${q}"]:checked`);if(v&&v.value===ans[q])score++;lines.push(`<li>Itemul ${i+1}: ${v&&v.value===ans[q]?'Corect':'Răspuns corect: '+ans[q]+(v?' (ai ales: '+v.value+')':' (fără răspuns)')}</li>`)});show('quizFeedback',`<h3>Rezultat: ${score}/4 puncte</h3><ul>${lines.join('')}</ul>`);updateProgress()}
+function checkStages(){let chosen=stages.map((_,i)=>document.getElementById('stage'+i).value);let score=0;chosen.forEach((v,i)=>{if(v===String(i))score++});let unique=new Set(chosen.filter(v=>v!=='')).size;let out=`<h3>Ordine: ${score}/6 poziții corecte</h3><p>${unique<6?'Atenție: fiecare etapă trebuie folosită o singură dată. ':''}Ordinea-model este:</p><ol class="step-list">${stages.map(s=>`<li>${s}</li>`).join('')}</ol>`;show('stageFeedback',out);updateProgress()}
+function showModel(){show('stageFeedback',`<h3>Răspunsuri-model</h3><p><strong>Decident:</strong> managerul de marketing sau persoana autorizată să aprobe campania.</p><p><strong>Problema:</strong> scăderea vânzărilor cu 15% într-o lună și necesitatea identificării cauzelor.</p><p><strong>Alternative:</strong> creatori de conținut (10 000 lei), reduceri online (12 000 lei), promovare la punctul de vânzare (8 000 lei).</p><p><strong>Criterii:</strong> cost, creștere estimată a vânzărilor, acoperire și impact asupra marjei de profit.</p><p><strong>Obiectiv:</strong> redresarea vânzărilor printr-o campanie potrivită, în limita bugetului de 12 000 lei.</p>`)}
+function checkCase(){let choice=document.getElementById('choice').value,reason=document.getElementById('reason').value.trim(),risk=document.getElementById('risk').value.trim(),info=document.getElementById('info').value.trim(),measure=document.getElementById('measure').value.trim();let points=0;let notes=[];if(choice){points++;notes.push('Ai selectat alternativa '+choice+'. Verifică dacă argumentele tale o susțin și dacă respectă bugetul.')}else notes.push('Selectează o alternativă.');if(reason.length>=40){points+=2;notes.push('Argumentarea are suficient conținut pentru a fi analizată; asigură-te că folosești datele din scenariu.')}else notes.push('Dezvoltă argumentarea în 3–4 propoziții, folosind cel puțin două date relevante.');if(risk.length>=20){points++;notes.push('Ai menționat un risc; verifică dacă măsura propusă reduce acel risc.')}else notes.push('Precizează un risc concret și o măsură de diminuare.');if(info.length>=20){points++;notes.push('Ai identificat informații suplimentare utile.')}else notes.push('Adaugă informații care ar reduce incertitudinea înainte de implementare.');if(measure.length>=20){points++;notes.push('Ai descris o modalitate de evaluare; include indicatori măsurabili.')}else notes.push('Indică indicatori, de exemplu vânzări, conversii, cost per achiziție sau marjă, și momentul măsurării.');show('caseFeedback',`<h3>Feedback orientativ: ${points}/6 puncte</h3><ul>${notes.map(n=>`<li>${n}</li>`).join('')}</ul><p class="small">Punctajul automat apreciază completitudinea, nu poate stabili singur calitatea tuturor argumentelor. Pentru o evaluare nuanțată, folosește cererea de feedback AI de mai jos.</p>`);updateProgress()}
+function makeAIPrompt(){let v=id=>document.getElementById(id).value.trim()||'Nu a completat';let p=`Ești evaluator didactic pentru elev de anul IV, specialitatea Marketing. Evaluează răspunsurile la tema „Conținutul și tipologia deciziilor; etapele și elementele procesului decizional”. Oferă feedback respectuos, concret și concis, evidențiază ce este corect, ce lipsește și răspunsuri-model. Nu presupune că există o singură alternativă optimă: evaluează calitatea justificării. Date fictive: Urban Style are scădere a vânzărilor cu 15%; buget 12.000 lei. A: creatori de conținut, cost 10.000 lei, acoperire 20.000 persoane, creștere estimată 12%. B: reduceri online, cost 12.000 lei, acoperire 15.000, creștere 18%, posibilă reducere a marjei. C: promovare la punctul de vânzare, cost 8.000 lei, acoperire 8.000, creștere 8%, rămâne rezervă.\nRăspunsuri elemente decizionale:\nDecident: ${v('decident')}\nProblema: ${v('problema')}\nAlternative: ${v('alternative')}\nCriterii: ${v('criterii')}\nObiectiv: ${v('obiectiv')}\nAlternativa aleasă: ${v('choice')}\nArgumentare: ${v('reason')}\nRisc și măsură: ${v('risk')}\nInformații suplimentare: ${v('info')}\nEvaluarea eficienței: ${v('measure')}\nTe rog acordă un punctaj orientativ din 10: identificarea elementelor 5p; argumentarea deciziei 2p; risc și măsură 1p; informații suplimentare 1p; evaluarea rezultatelor 1p. Explică punctajul și oferă recomandări de îmbunătățire.`;document.getElementById('aiPrompt').value=p;document.getElementById('aiBox').classList.remove('hidden')}
+async function copyPrompt(){let t=document.getElementById('aiPrompt').value;try{await navigator.clipboard.writeText(t);document.getElementById('copyStatus').textContent='Cererea a fost copiată. Deschide ChatGPT și lipește-o într-o conversație.'}catch(e){document.getElementById('aiPrompt').select();document.getElementById('copyStatus').textContent='Selectează textul și copiază-l manual (Ctrl+C), apoi lipește-l în ChatGPT.'}}
+function updateProgress(){let n=0;if(['q1','q2','q3','q4'].every(q=>document.querySelector(`input[name="${q}"]:checked`)))n++;if(stages.every((_,i)=>document.getElementById('stage'+i).value!=='')&&document.getElementById('problema').value.trim()&&document.getElementById('decident').value.trim())n++;if(document.getElementById('choice').value&&document.getElementById('reason').value.trim()&&document.getElementById('risk').value.trim())n++;document.getElementById('progress').textContent=`Progres: ${n} din 3 secțiuni completate`}
+function finish(){let checks=[...document.querySelectorAll('.donecheck')].filter(c=>c.checked).length;let q=document.getElementById('quizFeedback').classList.contains('hidden')?'Nu ai verificat încă provocarea 1.':'Provocarea 1 a fost verificată.';let s=document.getElementById('stageFeedback').classList.contains('hidden')?'Nu ai verificat încă provocarea 2.':'Provocarea 2 a fost verificată.';show('finalFeedback',`<h3>Activitate finalizată</h3><p>Ai bifat ${checks} din 5 competențe de autoverificare.</p><p>${q} ${s}</p><p>Asigură-te că ai citit feedbackul și, dacă dorești o evaluare individualizată, generează cererea pentru feedback AI, copiaz-o și trimite-o într-o conversație ChatGPT.</p><p><strong>Nivel de încredere autoevaluat:</strong> ${document.getElementById('confidence').value||'Neselectat'}</p>`);document.getElementById('finalFeedback').scrollIntoView({behavior:'smooth',block:'center'})}
+document.addEventListener('input',updateProgress);document.addEventListener('change',updateProgress);renderTimer();
+</script>
+</body>
+</html>
